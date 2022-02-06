@@ -1,0 +1,2 @@
+allow hal_wifi_hostapd wifi_efs_file:dir search;
+allow hal_wifi_hostapd wifi_efs_file:file { read open };

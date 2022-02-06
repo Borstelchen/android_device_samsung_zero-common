@@ -1,0 +1,8 @@
+# /sys/devices/virtual/camera/*/*_camfw
+# /dev/m2m1shot_jpeg
+allow cameraserver sysfs_camera:dir search;
+allow cameraserver sysfs_camera:file { read write open getattr };
+allow cameraserver camera_device:chr_file { read write open getattr ioctl };
+allow cameraserver camera_data_file:file { read open };
+allow cameraserver media_rw_data_file:dir search;
+
