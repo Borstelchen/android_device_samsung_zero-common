@@ -1,0 +1,132 @@
+#
+# Copyright (C) 2016 The  CyanogenMod Project
+# Copyright (C) 2017 The  LineageOS Project
+# Copyright (C) 2017-2019 TeamNexus
+# Copyright (C) 2020      Team Sexynos
+#
+
+#
+# Board
+#
+ro.product.board=universal7420
+ro.board.platform=exynos5
+
+#
+# ADB
+#
+sys.usb.ffs.aio_compat=1
+
+#
+# Audio
+#
+af.fast_track_multiplier=1
+audio_hal.force_voice_config=wide
+
+#
+# Dalvik
+#
+dalvik.vm.image-dex2oat-filter=speed
+dalvik.vm.dex2oat-filter=speed
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heapsize=512m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=512k
+dalvik.vm.heapmaxfree=8m
+
+#
+# Graphics
+#
+ro.opengles.version=196610
+
+#
+# HWUI
+#
+ro.hwui.texture_cache_size=88
+ro.hwui.layer_cache_size=58
+ro.hwui.path_cache_size=16
+ro.hwui.texture_cache_flushrate=0.4
+ro.hwui.shape_cache_size=4
+ro.hwui.gradient_cache_size=2
+ro.hwui.drop_shadow_cache_size=6
+ro.hwui.r_buffer_cache_size=8
+ro.hwui.text_small_cache_width=1024
+ro.hwui.text_small_cache_height=1024
+ro.hwui.text_large_cache_width=4096
+ro.hwui.text_large_cache_height=2048
+
+#
+# HWC
+#
+debug.sf.latch_unsignaled=1
+debug.sf.disable_backpressure=1
+persist.sys.ui.hw=1
+debug.sf.enable_gl_backpressure=1
+
+#
+# Media
+#
+debug.stagefright.ccodec=0
+
+#
+# Networking
+#
+net.tethering.noprovisioning=true
+persist.data.netmgrd.qos.enable=false
+ro.use_data_netmgrd=false
+
+#
+# Power
+#
+sys.power.profiles=true
+
+#
+# RIL
+#
+persist.radio.add_power_save=1
+persist.radio.apm_sim_not_pwdn=1
+rild.libpath=/system/vendor/lib64/libsec-ril.so
+rild.libpath2=/system/vendor/lib64/libsec-ril-dsds.so
+ro.ril.force_eri_from_xml=true
+ro.ril.gprsclass=10
+ro.ril.hsxpa=1
+ro.ril.telephony.mqanelements=6
+ro.telephony.get_imsi_from_sim=true
+ro.telephony.ril_class=SlteRIL
+telephony.lteOnGsmDevice=1
+
+# read single/dual-SIM properties
+import /vendor/etc/properties/radio.prop
+import /efs/factory.prop
+
+# read model properties
+import /init.rilchip.prop
+
+#
+# SoC
+#
+ro.chipname=exynos7420
+ro.nfc.sec_hal=true
+ro.nfc.fw_dl_on_boot=false
+
+#
+# Storage
+#
+ro.sys.sdcardfs=1
+
+#
+# WiFi
+#
+wifi.interface=wlan0
+wifi.direct.interface=p2p-dev-wlan0
+
+#
+# Wireless Display
+#
+wlan.wfd.hdcp=disable
+persist.debug.wfd.enable=1
+persist.sys.wfd.virtual=0
+
+#
+# END zero device-properties
+###
