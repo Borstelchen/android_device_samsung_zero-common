@@ -192,7 +192,7 @@ BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := androidboot.selinux=enforcing
-# BOARD_BOOTCONFIG := androidboot.selinux=enforcing
+BOARD_BOOTCONFIG := androidboot.selinux=enforcing
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x10008000 --ramdisk_offset 0x11000000 --tags_offset 0x10000100
 TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
